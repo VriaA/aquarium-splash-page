@@ -1,0 +1,247 @@
+ /*BROWSER RESET FROM http://meyerweb.com/eric/tools/css/reset/ */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+ margin: 0;
+ padding: 0;
+ border: 0;
+ font-size: 100%;
+ font: inherit;
+ vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+ display: block;
+}
+body {
+ line-height: 1;
+}
+ol, ul {
+ list-style: none;
+}
+blockquote, q {
+ quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+ content: '';
+ content: none;
+}
+table {
+ border-collapse: collapse;
+ border-spacing: 0;
+}
+
+/*========================= 
+        GENERAL STYLES 
+=========================*/
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: #404040;
+    font: 400 1rem/1 'Source Sans 3', sans-serif;
+    text-align: center;
+}
+
+/*=========================
+        LAYOUT
+=========================*/
+.intro-cntr {
+    height: 50vh;
+    background-color: #404040;
+    background-image: url(./images/jellyfishes.jpg);
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
+    padding: 0 3em 3em 3em;
+}
+
+.intro, .content {
+    display: flex;
+    flex-direction: column;
+}
+
+.top-text, h2 + p {
+    order: -1;
+}
+
+.intro {
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    max-width: 350px;
+    margin: auto;
+}
+
+.content-cntr {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0 1em;
+}
+
+.content {
+    max-width: 300px;
+}
+
+h2 {
+    margin-bottom: 1.5rem;
+}
+
+h2 + p {
+    margin: 1.5em 0 5px;
+}
+
+.disclaimer {
+    margin: 0 auto;
+    width: 150px;
+}
+
+input, .btn {
+    width: 100%;
+    padding: .4em;
+    border-radius: 5px;
+    border: 1px solid #818181;
+    transform: scale(1);
+    transition: 250ms all ease;
+}
+
+.btn {
+    padding: .65em;
+}
+
+input:is(:hover, :focus), .btn:is(:hover, :focus) {
+    transform: scale(1.05)
+}
+
+.btn:active {
+    transform: scale(1);
+    transform: translateY(4px);
+}
+
+/*=========================
+        TYPOGRAPHY
+=========================*/
+h1 {
+    font-weight: 300;
+    font-size: 2.25rem;
+}
+
+h1, .btn-primary {
+    color: #fff;
+}
+
+h1 span, .invite, h2 + p {
+    font-weight: 900;
+}
+
+.invite, h2, h2 + p {
+    font-size: 1.3125rem;
+}
+
+.small {
+    font-size: 0.625rem;
+}
+
+.top-text {
+    color: #ccccfc;
+}
+
+.invite {
+    color: transparent !important;
+    background: linear-gradient(45deg, #fff 40%, #10035a 50%, #fff 60%);
+    -webkit-background-clip: text; 
+    -moz-background-clip: text;
+    -o-background-clip: text;
+    -ms-background-clip: text;
+    background-clip: text;
+}
+
+h2 {
+    color: #0E1C52ff;
+}
+
+.invite, .top-text, h2, .btn {
+    text-transform: uppercase;
+}
+
+.top-text, .invite, .btn-primary{
+    letter-spacing: 1px;
+}
+
+.top-text {
+    padding-top: 1em;
+    border-top: 5px solid #fff;
+    border-image: linear-gradient(to left, #6c6cad 50%, #fff) 1;
+}
+
+.btn-primary, .btn:active {
+    border: none;
+    background-color: #14143b;
+    background-image: linear-gradient(to right, #14143b 50%, #495680 );
+}
+
+.content p:nth-of-type(2) {
+    line-height: 1.4;
+    margin-bottom: .65rem;
+}
+
+input, .btn {
+    font: 400 1rem/1 'Source Sans 3', sans-serif;
+    text-align: inherit;
+    margin-bottom: .75rem;
+    outline: none;
+}
+
+.btn:is(:hover, :focus) {
+    background: #14143b;
+}
+
+@media (min-width: 768px) {
+
+/*=========================== LAYOUT ===========================*/
+    body {
+        display: flex;
+        min-height: 100vh;
+    }
+    .intro-cntr, .content-cntr {
+        width: 50%;
+        height: inherit;
+        padding: 0 2em 3em 2em;
+    }
+
+    .intro, .content  {
+        max-width: 400px;
+    }
+
+/*=========================== TYPOGRAPHY ===========================*/
+
+    body, input, .btn {
+        font-size: 1.125rem;
+    }
+
+    h1 {
+        font-size: 3.5rem;
+    }
+
+    h2, h2 + p, .invite {
+        font-size: 1.75rem;
+    }
+}
