@@ -148,7 +148,7 @@ h1, .btn-primary {
     color: #fff;
 }
 
-h1 span, .invite, h2 + p {
+h1 span, .invite, h2 + p, h2 {
     font-weight: 900;
 }
 
